@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { FloatButton } from 'antd';
-import { Antd } from './icons';
-import { injectCss } from './utils';
-import { DevToolPanal } from './DevToolPanal';
+import React, { useEffect, useState } from "react";
+import { FloatButton } from "antd";
+import { Antd } from "./icons";
+import { injectCss } from "./utils";
+import { DevToolPanal } from "./DevToolPanal";
 
 export function DevTool() {
   const [open, setOpen] = useState(false);

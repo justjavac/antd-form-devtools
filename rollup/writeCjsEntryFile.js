@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const ts = require('typescript');
-const fs = require('fs-extra');
-const path = require('path');
-const pkg = require('../package.json');
+const ts = require("typescript");
+const fs = require("fs-extra");
+const path = require("path");
+const pkg = require("../package.json");
 
 function writeCjsEntryFile(
   name = pkg.name,
-  formatName = 'cjs',
-  tsconfig = 'tsconfig.json',
+  formatName = "cjs",
+  tsconfig = "tsconfig.json",
 ) {
   const baseLine = `module.exports = require('./${name}`;
   const contents = `
@@ -26,15 +26,15 @@ if (process.env.NODE_ENV !== 'development') {
   const tsCompilerOptions = ts.parseJsonConfigFileContent(
     tsconfigJSON,
     ts.sys,
-    './',
+    "./",
   ).options;
 
   const filename =
-    formatName === 'cjs'
-      ? [name, 'js'].join('.')
-      : [name, formatName, 'js'].join('.');
+    formatName === "cjs"
+      ? [name, "js"].join(".")
+      : [name, formatName, "js"].join(".");
 
   return fs.outputFile(path.join(tsCompilerOptions.outDir, filename), contents);
 }
 
-writeCjsEntryFile('index');
+writeCjsEntryFile("index");
