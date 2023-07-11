@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React from 'react';
+import React from "react";
 import {
   Button,
   Checkbox,
@@ -10,9 +10,9 @@ import {
   Divider,
   Typography,
   Image,
-} from 'antd';
+} from "antd";
 
-import { DevTool } from 'antd-form-devtools/src/DevTool';
+import { DevTool } from "antd-form-devtools/src/DevTool";
 
 const { Title, Paragraph } = Typography;
 
@@ -20,21 +20,21 @@ function App() {
   return (
     <>
       <Typography style={{ marginTop: 40 }}>
-        <Title style={{ textAlign: 'center' }}>
+        <Title style={{ textAlign: "center" }}>
           DevTools for Ant Design Forms
         </Title>
-        <Paragraph style={{ textAlign: 'center' }}>
+        <Paragraph style={{ textAlign: "center" }}>
           A Powerfull DevTools to help debug Ant Design Forms.
         </Paragraph>
       </Typography>
-      <Paragraph style={{ textAlign: 'center' }}>
+      <Paragraph style={{ textAlign: "center" }}>
         <Image
           width={600}
           src="/screen.png"
           alt="DevTools for Ant Design Forms"
           preview={false}
           style={{
-            boxShadow: '6px 6px 16px 6px rgba(0, 0, 0, 0.08)',
+            boxShadow: "6px 6px 16px 6px rgba(0, 0, 0, 0.08)",
             borderRadius: 8,
           }}
         />
@@ -44,11 +44,11 @@ function App() {
         name="userinfo"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
-        style={{ maxWidth: 600, margin: 'auto' }}
+        style={{ maxWidth: 600, margin: "auto" }}
         initialValues={{
-          username: '',
-          firstname: '',
-          lastname: '',
+          username: "",
+          firstname: "",
+          lastname: "",
           remember: true,
         }}
         onFinish={console.log}
@@ -58,7 +58,7 @@ function App() {
         <Form.Item
           label="Username"
           name="username"
-          rules={[{ required: true, message: 'Please input your username!' }]}
+          rules={[{ required: true, message: "Please input your username!" }]}
         >
           <Input />
         </Form.Item>
@@ -66,7 +66,7 @@ function App() {
         <Form.Item
           label="Firstname"
           name="firstname"
-          rules={[{ required: true, message: 'Please input your firstname!' }]}
+          rules={[{ required: true, message: "Please input your firstname!" }]}
         >
           <Input />
         </Form.Item>
@@ -74,7 +74,7 @@ function App() {
         <Form.Item
           label="Lastname"
           name="lastname"
-          rules={[{ required: true, message: 'Please input your lastname!' }]}
+          rules={[{ required: true, message: "Please input your lastname!" }]}
         >
           <Input />
         </Form.Item>
@@ -90,7 +90,7 @@ function App() {
         <Form.Item
           label="Age"
           name="age"
-          rules={[{ required: true, message: 'Please input your age!' }]}
+          rules={[{ required: true, message: "Please input your age!" }]}
         >
           <InputNumber min="0" max="100" />
         </Form.Item>

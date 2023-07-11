@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import type { Key } from 'react';
+import React, { useState } from "react";
+import type { Key } from "react";
 import {
   Button,
   Form,
@@ -8,8 +8,8 @@ import {
   ConfigProvider,
   Descriptions,
   Badge,
-} from 'antd';
-import type { ColumnsType } from 'antd/es/table';
+} from "antd";
+import type { ColumnsType } from "antd/es/table";
 
 interface DataType {
   key: Key;
@@ -41,15 +41,15 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
 
   const columns: ColumnsType<DataType> = [
     {
-      dataIndex: 'key',
+      dataIndex: "key",
       render: (text, record) => {
         return (
           <Badge size="small">
             <Button
               onClick={() => {
                 form.scrollToField(record.key, {
-                  behavior: 'smooth',
-                  scrollMode: 'always',
+                  behavior: "smooth",
+                  scrollMode: "always",
                 });
                 form.getFieldInstance(record.key)!.focus();
               }}
@@ -64,7 +64,7 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
       },
     },
     {
-      dataIndex: 'type',
+      dataIndex: "type",
     },
   ];
 
@@ -73,7 +73,7 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
       return {
         key,
         name: key,
-        type: value === undefined ? '???' : typeof value,
+        type: value === undefined ? "???" : typeof value,
         value: JSON.stringify(value),
         touched: form.isFieldTouched(key),
         error: form.getFieldError(key),
@@ -112,7 +112,7 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
                 : setExpandedRowKeys(data.map((x) => x.key))
             }
           >
-            {expandAll ? '[-] Collapse All' : '[+] Expand All'}
+            {expandAll ? "[-] Collapse All" : "[+] Expand All"}
           </Button>
         }
       >
@@ -123,7 +123,7 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
           showHeader={false}
           pagination={false}
           rowClassName={(record) =>
-            record.error.length > 0 ? 'afd-error' : ''
+            record.error.length > 0 ? "afd-error" : ""
           }
           expandable={{
             expandedRowRender: (record: DataType) => (
@@ -140,7 +140,7 @@ export function DevToolPanal({ open, onClose }: DevToolPanalProps) {
             },
             expandedRowKeys,
             expandedRowClassName: (record) =>
-              record.error.length > 0 ? 'afd-error' : '',
+              record.error.length > 0 ? "afd-error" : "",
           }}
         />
       </Drawer>
@@ -153,9 +153,9 @@ function FromItemPanal(record: DataType) {
     <Descriptions
       size="small"
       column={1}
-      labelStyle={{ textAlign: 'right', display: 'block', flex: 1 }}
+      labelStyle={{ textAlign: "right", display: "block", flex: 1 }}
     >
-      <Descriptions.Item label="Value">{record.value || '-'}</Descriptions.Item>
+      <Descriptions.Item label="Value">{record.value || "-"}</Descriptions.Item>
       <Descriptions.Item label="Touched">
         {String(record.touched)}
       </Descriptions.Item>
