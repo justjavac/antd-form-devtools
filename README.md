@@ -1,5 +1,9 @@
 # DevTools for Ant Design Forms
 
+[![CI](https://github.com/justjavac/antd-form-devtools/actions/workflows/main.yml/badge.svg)](https://github.com/justjavac/antd-form-devtools/actions/workflows/main.yml)
+[![npm][npm]][npm-url]
+[![download][download]][download-url]
+
 A Powerfull DevTools to help debug Ant Design Forms.
 
 ![](example/public/screen.png)
@@ -65,3 +69,8 @@ root directory for details.
 # Thank
 
 ♥️ The inspiration for this project comes from [react-hook-form/devtools](https://github.com/react-hook-form/devtools).
+
+[npm]: https://img.shields.io/npm/v/antd-form-devtools.svg
+[npm-url]: https://npmjs.com/package/antd-form-devtools
+[download]: https://img.shields.io/npm/dm/antd-form-devtools.svg?style=flat
+[download-url]: https://npmcharts.com/compare/antd-form-devtools?minimal=true
