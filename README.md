@@ -44,6 +44,14 @@ const App = () => {
 export default App;
 ```
 
+## Local example
+
+```bash
+git@github.com:justjavac/antd-form-devtools.git
+cd example
+yarn dev
+```
+
 ## License
 
 [antd-form-devtools](https://github.com/justjavac/antd-form-devtools) is
