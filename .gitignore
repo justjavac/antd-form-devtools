@@ -8,10 +8,8 @@ yarn-error.log*
 # Coverage directory used by tools like istanbul
 coverage
 
-# Dependency directories
 node_modules/
-example/node_modules/
-example/dist/
+dist/
 
 # Optional npm cache directory
 .npm
@@ -26,7 +24,6 @@ example/dist/
 .yarn-integrity
 
 .DS_Store
-/dist
 .idea/
 .rpt2_cache
 .coveralls.yml
