@@ -12,7 +12,7 @@ import {
   Image,
 } from 'antd';
 
-import { DevTool } from '../../src/DevTool';
+import { DevTool } from 'antd-form-devtools/src/DevTool';
 
 const { Title, Paragraph } = Typography;
 

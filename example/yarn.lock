@@ -541,6 +541,9 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
+antd-form-devtools@../:
+  version "1.0.1"
+
 antd@^5.6.4:
   version "5.6.4"
   resolved "https://registry.npmjs.org/antd/-/antd-5.6.4.tgz#689d74ba61181ba6ea87a0c5d249d30d116ce602"
