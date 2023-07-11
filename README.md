@@ -47,7 +47,7 @@ export default App;
 ## Local example
 
 ```bash
-git@github.com:justjavac/antd-form-devtools.git
+git clone https://github.com/justjavac/antd-form-devtools.git
 cd example
 yarn dev
 ```
