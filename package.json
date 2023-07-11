@@ -1,6 +1,6 @@
 {
   "name": "antd-form-devtools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ant Design Form dev tool to help debugging forms",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.development.js",
