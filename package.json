@@ -1,0 +1,101 @@
+{
+  "name": "antd-form-devtools",
+  "version": "1.0.0",
+  "description": "Ant Design Form dev tool to help debugging forms",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.development.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.development.js",
+  "jsdelivr": "dist/index.umd.development.js",
+  "jsnext:main": "dist/index.esm.js",
+  "source": "src/index.tsx",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "yarn clean",
+    "build": "node rollup/writeCjsEntryFile.js && rollup -c --bundleConfigAsCjs",
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "lint:fix": "yarn lint -- --fix",
+    "lint:types": "tsc --noEmit",
+    "prepublishOnly": "yarn lint && yarn lint:types && yarn build",
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md,json}\""
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "devtool",
+    "devtools",
+    "form",
+    "forms",
+    "form-validation",
+    "validation",
+    "antd",
+    "ant-design",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/justjavac/antd-form-devtools.git"
+  },
+  "author": "justjavac <justjavac@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/justjavac/antd-form-devtools/issues"
+  },
+  "homepage": "https://github.com/justjavac/antd-form-devtools",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/react": "^18.2.14",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "antd": "^5.6.4",
+    "babel-loader": "^9.1.3",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^5.0.0-alpha.2",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.26.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "antd": "^5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:types && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn lint:fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  }
+}
