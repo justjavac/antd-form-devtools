@@ -105,5 +105,10 @@
         "version": "detect"
       }
     }
-  }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "!.*.js"
+  ]
 }
