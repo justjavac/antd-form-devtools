@@ -18,7 +18,7 @@ const { Title, Paragraph } = Typography;
 
 function App() {
   return (
-    <div>
+    <>
       <section style={{ maxWidth: 600, margin: "auto" }}>
         <Typography style={{ marginTop: 64 }}>
           <Title style={{ textAlign: "center" }}>
@@ -174,7 +174,7 @@ export default App;`}
         <Divider />
         DevTools for Ant Design Forms ©2023 Created by @justjavac.
       </footer>
-    </div>
+    </>
   );
 }
 
