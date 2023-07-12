@@ -22,7 +22,6 @@
     "lint:fix": "yarn lint -- --fix",
     "lint:types": "tsc --noEmit",
     "prepublishOnly": "yarn lint && yarn lint:types && yarn build",
-    "prepare": "husky install",
     "format": "prettier --write \"**/*.{js,ts,tsx,md,json}\""
   },
   "keywords": [
@@ -66,7 +65,6 @@
     "eslint-plugin-prettier": "^5.0.0-alpha.2",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "react": "^18.2.0",
@@ -83,20 +81,6 @@
     "antd": "^5",
     "react": "^18",
     "react-dom": "^18"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint:types && lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "yarn lint:fix",
-      "prettier --write"
-    ],
-    "*.{md,json}": [
-      "prettier --write"
-    ]
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
